@@ -26,7 +26,7 @@ const Home = () => {
   }, [])
 
   const fetchprojectsApi = async (req, res) => {
-    await fetch('http://localhost:1337/api/projects', {
+    await fetch('/api/projects', {
       method: 'get',
       headers: {
         'Content-Type': 'application/json'
