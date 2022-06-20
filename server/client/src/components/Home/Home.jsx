@@ -20,9 +20,10 @@ const Home = () => {
   // const [isloading, setisloading] = useState(true)
 
   useEffect(() => {
-    return () => setTimeout(() => {
-      setLetterClass('text-animate-hover')
+    setTimeout( async () => {
+      await setLetterClass('text-animate-hover')
     }, 4000)
+    fetchprojectsApi()
   }, [])
 
   const fetchprojectsApi = async (req, res) => {
