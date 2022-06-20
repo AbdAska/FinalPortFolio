@@ -1,0 +1,239 @@
+.skill-page-container {
+    max-width: 1920px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid red;
+    padding: 0rem 0rem 0rem 14rem;
+    justify-content: space-between;
+
+    .skill-page-section {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            cursor: default;
+            // border: 1px solid yellow;
+            justify-content: space-between;
+
+            .skill-page-left {
+                display: flex;
+                flex-direction: column;
+                max-width: 51%;
+                width: 100%;
+                height: 100%;
+                padding-left: 9rem;
+                line-height: 1.8rem;
+                margin-bottom: 3rem;
+                // border: 1px solid white;
+
+                .skill-page-left-text {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 90%;
+                    margin-top: 4rem;
+                    // border: 1px solid yellow;
+            
+                    .ptag-about {
+                        display: flex;
+                        width: 100px;
+                        margin-left: -2rem;
+                        font-family: 'La Belle Aurore', cursive;
+                        color: #ffd700;
+                        font-size: 1.8rem;
+                        // border: 1px solid red;
+                    }
+            
+                    p {
+                        position: relative;
+                        margin-bottom: 1.5rem;
+                        line-height: 2.25rem;
+            
+                        a {
+                            text-decoration: none;
+                            color: #08fdd8;
+                        }
+                    }
+            
+                    h2 {
+                        font-family: 'Coolvetica';
+                        color: #08fdd8;
+                        font-weight: 400;
+                        margin-top: 0;
+                        position: relative;
+                        margin-bottom: 40px;
+                        font-size: 7.3rem;
+                        line-height: 6.7rem;
+            
+                    }
+            
+                    .text-animates {
+                        display: inline-block;
+                        opacity: 0;
+                        animation: bounceIn;
+                        animation-duration: 1s;
+                        animation-delay: 1s;
+                        animation-fill-mode: forwards;
+                        min-width: 10px;
+                    }
+            
+                    .text-animates-hover {
+                        min-width: 12px;
+                        display: inline-block;
+                        animation-fill-mode: both;
+            
+                        &:hover {
+                            animation: rubberBand 1s;
+                            color: #08fdd8;
+                        }
+                    }
+            
+                    .text-my {
+                        animation: rubberBand 1s;
+                        // color: #ffd700;
+                    }
+            
+                    @for $l from 1 through 20 {
+                        .text-animates._#{$l} {
+                            animation-delay: #{$l / 10}s;
+                            // animation-delay: calc($i / 10)s;
+                        }
+                    }
+            
+                    .h2tag-about {
+                        display: flex;
+                        width: 100px;
+                        margin-left: -2rem;
+                        font-family: 'La Belle Aurore', cursive;
+                        color: #ffd700;
+                        font-size: 1.8rem;
+                        // border: 1px solid red;
+                    }
+            
+                    .h2tag-about-bottom {
+                        display: flex;
+                        width: 100px;
+                        margin-top: -3rem;
+                        margin-left: -2rem;
+                        font-family: 'La Belle Aurore', cursive;
+                        color: #ffd700;
+                        font-size: 1.8rem;
+                        // border: 1px solid red;
+                    }
+            
+                    a {
+                        color: #08fdd8;
+                        text-decoration: none;
+            
+                        &:hover {
+                            opacity: 0.5;
+                            transition: 0.3s ease-in;
+                        }
+                    }
+                }
+            }
+
+            .skill-page-right {
+                display: flex;
+                max-width: 48%;
+                width: 50%;
+                height: 100%;
+                justify-content: space-between;
+                align-items: center;
+                // border: 1px solid white;
+                position: relative;
+                padding-right: 5rem;
+
+                .spr-card-container {
+                    display: flex;
+                    flex-direction: column;
+                    width: 48%;
+                    background: #2a2a2a;
+                    padding: 3rem;
+                    transition: transform 0.3s;
+                    height: auto;
+
+                    &:hover {
+                            transform: scale(1.1);
+                            border: 1px solid #08fdd8;
+                        }
+
+                    header {
+                        font-family: 'Coolvetica';
+                        font-size: 2.6rem;
+                        line-height: 2rem;
+                        margin-bottom: 2rem;
+                    }
+                    section {
+                            font-size: 1.6rem;
+                            color: #ababab;
+                            margin-bottom: 1rem;
+                    }
+                    footer {
+                        font-size: 1.6rem;
+                        color: #ababab;
+                        line-height: 1.8rem;
+                    }
+                }
+
+            }
+    }
+
+    .tags {
+        display: flex;
+        flex-direction: column;
+        font-style: italic;
+        font-size: 1.8rem;
+        font-family: 'La Belle Aurore', cursive;
+        z-index: 3;
+        color: #ffd700;
+        margin-left: 4rem;
+    }
+
+    .top-tags {
+        display: flex;
+        margin-top: 2rem;
+
+        .top-body {
+            margin-left: 2rem;
+        }
+    }
+
+    .bottom-tags {
+        display: flex;
+        margin-top: auto;
+        margin-bottom: 2rem;
+
+        .bottom-html {
+            margin-left: -2rem;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .skill-page-container {
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .skill-page-left {
+        padding-left: 5rem !important;
+    }
+    .skill-page-section {
+        flex-direction: column !important;
+        // border: 1px solid red;
+    }
+    .skill-page-left {
+        max-width: 100% !important;
+    }
+    .skill-page-right {
+        max-width: 100% !important;
+        width: 100% !important;
+        align-items: flex-start !important;
+        justify-content: space-around !important;
+        padding-right: 1.25rem !important;
+
+        .spr-card-container {
+            height: 20rem !important;
+        }
+    }
+}

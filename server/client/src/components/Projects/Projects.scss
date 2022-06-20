@@ -1,0 +1,110 @@
+.project-page-container {
+    max-width: 1920px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid red;
+    padding: 0rem 0rem 0rem 14rem;
+    justify-content: center;
+    align-items: center;
+
+    .project-page-section {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            cursor: default;
+            // position: relative;
+            // border: 1px solid yellow;
+            // justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+
+            .project-images{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                width: 100%;
+                // border: 1px solid red;
+
+                .each-project-img {
+                    opacity: 1;
+                    display: block;
+                    overflow: hidden;
+                    max-height: 30rem;
+                    // border: 1px solid yellow;
+                    backface-visibility: hidden;
+                    position: relative;
+                    // margin: 1rem;
+            
+                    &:hover {
+                        .middle-project {
+                            opacity: 1;
+                            transition: 0.5s ease-out;
+                        }
+            
+                        .image-project {
+                            opacity: 1;
+                            transform: scale(1.50);
+                        }
+                    }
+            
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0.5;
+                        transition: .3s ease;
+                        transform: scale(1.25);
+                    }
+            
+                    .middle-project {
+                        transition: .3s ease;
+                        opacity: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        cursor: pointer;
+            
+                        a {
+                            text-decoration: none;
+            
+                            &:visited {
+                                color: black;
+                            }
+                        }
+            
+                        .text-project {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #08fdd8;
+                            color: black;
+                            font-size: 12px;
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            letter-spacing: 4px;
+                            text-align: center;
+                            font-weight: 600;
+                            font-family: "Open Sans", sans-serif;
+                        }
+                    }
+                }
+            }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .project-page-container {
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .project-images {
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .project-images {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
