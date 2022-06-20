@@ -28,7 +28,7 @@ const Sidebar = () => {
       </nav>
       <ul className="social">
         <li><a
-            href="https://www.linkedin.com/in/asadleghari"
+            href="https://www.linkedin.com/in/abdullah-askari-437b38154/"
             target="_blank"
             rel="noreferrer"
         >
@@ -42,9 +42,9 @@ const Sidebar = () => {
             <FontAwesomeIcon icon={faGithub}/>
         </a></li>
         <li><a
-            href="https://www.twitter.com/asadleghari"
+            href="https://twitter.com/Imnunobserver"
             rel="noreferrer"
-            target="_blank"
+            target="_blank" 
         >
             <FontAwesomeIcon icon={faTwitter}/>
         </a></li>
